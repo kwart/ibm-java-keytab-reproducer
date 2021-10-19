@@ -4,6 +4,22 @@
 
 We hit it by a Kerberos authentication test in Hazelcast Enterprise ([#3704](https://github.com/hazelcast/hazelcast-enterprise/issues/3704)).
 
+## Environment
+
+Reproduced on Linux x86_64 with the following Java 8 version (up-to-date as of 2021-10-19):
+
+```
+java version "1.8.0_301"
+Java(TM) SE Runtime Environment (build 8.0.6.36 - pxa6480sr6fp36-20210824_02(SR6 FP36))
+IBM J9 VM (build 2.9, JRE 1.8.0 Linux amd64-64-Bit Compressed References 20210824_12036 (JIT enabled, AOT enabled)
+OpenJ9   - 7bb9176
+OMR      - 820a5aa
+IBM      - dc8f23e)
+JCL - 20210806_01 based on Oracle jdk8u301-b09
+```
+
+We saw the issue in the older IBM Java 8 updates too.
+
 ## Show me the code
 
 The piece of code which fails is the following:
