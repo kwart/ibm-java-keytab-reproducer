@@ -20,5 +20,4 @@ jobs:
           java-version: '8'
           distribution: 'adopt'
       - name: Build with Maven
-        # Use -DskipTests as it's intended for IBM Java 8 only
-        run: mvn --batch-mode --update-snapshots package -DskipTests
+        run: mvn --batch-mode --update-snapshots package
